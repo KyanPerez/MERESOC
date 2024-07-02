@@ -1,0 +1,353 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F4D74B;
+    text-align: center;
+
+}
+section {
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+header {
+    background-image: url('img/blob-scene-haikei.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: black;
+    padding: 60px; /* Adjusted padding */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px; /* Ensures header has sufficient height without excessive padding */
+}
+
+header img {
+    margin-right: 20px;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%; /* Full width */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Space between the two nav-groups */
+    align-items: center;
+    background-color: #000;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.nav-group {
+    display: flex; /* This ensures that both groups are flex containers */
+}
+
+.nav-group.left {
+    flex-grow: 0; /* Do not allow the left group to grow */
+    justify-content: flex-start;
+}
+
+.nav-group.right {
+    flex-grow: 1; /* Allows the right group to take up the remaining space */
+    justify-content: flex-end;
+}
+
+button.nav-link {
+    background: none;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.nav-link:hover {
+    background-color: #333;
+}
+
+
+
+
+/* Container and Section Styles */
+.container {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+#about {
+    background-color: #F4D74B;
+    padding-bottom: 100px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: xx-large;
+}
+
+#events {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-image: url('img/blob-scene-haikei.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Button and Logo Styles */
+
+.button-ausimm {
+    background-color: #003B5B;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 5px;
+}
+
+.button-ausimm:hover {
+    background-color: #003366;
+}
+
+.logo-ausimm {
+    height: 30px;
+    width: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.button-arc {
+    background-color: #76C043;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 5px;
+}
+.button-arc:hover {
+    background-color: #5d9b35;
+}
+
+
+.logo-arc {
+    height: 30px;
+    width: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+    }
+    
+    header img {
+        margin-bottom: 10px;
+    }
+    
+    header h1, header p {
+        font-size: 18px; /* Simplified, as both have the same size */
+    }
+    
+    button.nav-link {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
+footer {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-content p {
+    margin: 5px 0; /* Adjust spacing as needed */
+}
+
+.social-links {
+    margin: 10px 0;
+}
+
+.social-icon img {
+    width: 30px; /* Adjust size as needed */
+    margin: 0 10px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: auto; /* Centers content in the footer */
+}
+
+span {
+    color: red; /* Style the heart emoji with red color */
+}
+
+
+
+
+
+.containers {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.item-containers {
+    position: relative;
+    margin: 24px;
+    width: 320px;
+    height: 570px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.img-containers,
+.body-containers {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.img-containers img {
+    width: 100%;
+}
+
+.body-containers {
+    position: relative;
+}
+
+.overlay {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-color: rgba(24, 83, 122, 0.6);
+    opacity: 0;
+    transition: height linear 0.4s, opacity linear 0.2s;
+}
+
+.item-containers:hover .overlay {
+    opacity: 1;
+    height: 150px;
+}
+
+.event-info {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+}
+
+.title,
+.price {
+    color: #18537a;
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 12px;
+}
+
+.info {
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+
+.separator {
+    width: 20%;
+    height: 6px;
+    background-color: #17537a;
+    margin-bottom: 16px;
+}
+
+.additional-info {
+    border-top: 1px solid #bbb;
+    margin-top: 12px;
+    padding: 28px;
+    padding-bottom: 0;
+}
+
+.additional-info .info {
+    font-size: 0.9em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.info i {
+    color: #18537a;
+    font-size: 1.1em;
+    margin-right: 4px;
+}
+
+.info span {
+    color: #18537a;
+    font-weight: bolder;
+}
+
+.action {
+    color: #fff;
+    border: 3px solid #fff;
+    background-color: transparent;
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    outline: none;
+    cursor: pointer;
+    padding: 12px;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: background-color 0.4s, top 0.4s;
+}
+
+.item-container:hover .action {
+    top: 50px;
+}
+
+.action:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+a.clickable-container {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
